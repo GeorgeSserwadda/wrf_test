@@ -11,3 +11,21 @@ To run the script simply type the following command in your terminal
   ./wps_geog_highres.sh
 
 Note that you only need to run WPS_GEOG scripts once but you will need run the GFS scripts whenever you need to use the most rescent GFS data
+
+Downlod WPS data from https://github.com/wrf-model/WPS
+  git clone https://github.com/wrf-model/WPS
+Download a wrfdomainwizard and use it to generate a desired wrf domain utilizing the file path for WPS, WPS_GEOG, and set a file path for the DOMAIN to be created
+
+Download the WRF Docker Image: 
+  docker pull thmamouka/wrf-3dvar:4.5
+Launch the Docker Container:
+      docker run -it --rm \
+    -v /home/george/wrf_model/wrf_test/wrf_data/WPS_GEOG:/wrf_data/WPS_GEOG:ro \
+    -v /home/george/wrf_model/wrf_test/wrf_data/DOMAIN:/wrf_data/DOMAIN \
+    -v /home/george/wrf_model/wrf_test/wrf_data/GFS:/wrf_data/GFS:ro \
+    -v /home/george/wrf_model/wrf_test/wrf_data/output:/wrf/WRF/run/output \
+    --storage-opt size=100G \
+    thmamouka/wrf-3dvar:4.5 bash
+
+
+  
