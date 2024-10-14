@@ -19,14 +19,19 @@ Download a wrfdomainwizard and use it to generate a desired wrf domain utilizing
 Download the WRF Docker Image: 
   docker pull thmamouka/wrf-3dvar:4.5
   
-Launch the Docker Container:
-Run the Docker container with the following command:
+Launch the Docker Container: 
+  
+    docker run -it --rm \thmamouka/wrf-3dvar:4.5 bash
+
+Or Run the Docker container with the following command which links the earlier downloaded data folders to wrf docker image:
+
     docker run -it --rm \
     -v /home/george/wrf_model/wrf_test/WPS_GEOG:/wrf_data/WPS_GEOG:ro \
     -v /home/george/wrf_model/wrf_test/DOMAIN:/wrf_data/DOMAIN:ro \
     -v /home/george/wrf_model/wrf_test/GFS:/wrf_data/GFS:ro \
     -v /home/george/wrf_model/wrf_test/output:/wrf/WRF/run/output \
     thmamouka/wrf-3dvar:4.5 bash
+
 This command mounts your host directories (in wrf_test) to the Docker container.
 
 
