@@ -1,5 +1,7 @@
 Scripts to download wrf model data like GFS and WPS_GEOGRAPHY (WPS_GEOG)
 
+Note: Ensure that you at least have 250GB of free disk space before starting
+
 In order to run the scripts (via linux os) ensure that they are executables by using the command 
   
     chmod +x gfs_data_download.sh 
