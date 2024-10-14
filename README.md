@@ -21,6 +21,7 @@ Downlod WPS data from https://github.com/wrf-model/WPS
 Download a wrfdomainwizard and use it to generate a desired wrf domain utilizing the file path for WPS, WPS_GEOG, and set a file path for the DOMAIN to be created
 
 Download WRF docker image from any of the links below
+
 https://hub.docker.com/r/0902vrlt/wrf-3dvar
 
     docker pull 0902vrlt/wrf-3dvar 
