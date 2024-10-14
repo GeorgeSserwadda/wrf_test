@@ -62,6 +62,21 @@ Run the command below while on the path containing the file (/comsoftware/wrf/WP
 
     ./link_grib.csh /wrf_data/GFS/
 
+Final Preprocessing Steps
+
+While on the WPS path in you WRF contain (/comsoftware/wrf/WPS), Execute the following WPS commands in sequence:
+
+1Generate geographical data
+
+    ./geogrid.exe    
+Process meteorological data (GFS)
+
+    ./ungrib.exe      
+Interpolate data for WRF
+
+    ./metgrid.exe     
+
+
 
 
   
