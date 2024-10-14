@@ -36,6 +36,8 @@ Launch the Docker Container:
 
 Or Run the Docker container with the following command which links the earlier downloaded data folders to wrf docker container:
 
+Assuming that my WRF data files on the local computer are on the PATH: "/home/george/wrf_model/wrf_test"
+
     docker run -it --rm \
     -v /home/george/wrf_model/wrf_test/WPS_GEOG:/wrf_data/WPS_GEOG:ro \
     -v /home/george/wrf_model/wrf_test/DOMAIN:/wrf_data/DOMAIN:ro \
