@@ -48,5 +48,20 @@ Assuming that my WRF data files on the local computer are on the PATH: "/home/ge
     thmamouka/wrf-3dvar:4.5 bash
 This command mounts your host directories (in wrf_test) to the Docker container.
 
+Edit content in the "namelist.wps" file of the mounted WPS folder/directory to match the content of the "namelist.wps" file that is in the created DOMAIN
+In this example match the contents "namelist.wps" file at the following locations
+
+1)      /wrf_data/DOMAIN
+2)      /comsoftware/wrf/WPS
+
+Links meteorological input files (e.g., GFS data) to the WPS workflow. 
+
+To do the linking, use the "link_grib.csh" file found at "/comsoftware/wrf/WPS" in the WRF docker container as shown below
+
+Run the command below while on the path containing the file (/comsoftware/wrf/WPS)
+
+    ./link_grib.csh /wrf_data/GFS/
+
+
 
   
